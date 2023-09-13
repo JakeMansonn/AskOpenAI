@@ -61,3 +61,103 @@ The tool will then communicate with the OpenAI API and return the response direc
 
 ## Security Note
 Remember to keep your API key secure. Avoid exposing it in public scripts or repositories. Always store your API key in a secure location.
+
+
+
+
+
+Prerequisite: Install Python and Git on Windows 11:
+
+Step 1: Install Python:
+
+Open your web browser and go to the official Python website: Python Downloads
+
+Download the latest Python installer for Windows.
+
+Run the installer.
+
+During installation, make sure to check the box that says "Add Python to PATH." This will add Python to your system's PATH so that you can run it from the command line.
+
+Once Python is installed, open a new instance of the Windows Terminal or Command Prompt to ensure that the PATH changes take effect.
+
+Verify the Python installation by running the following command:
+
+batch
+Copy code
+python --version
+This should display the installed Python version.
+
+Step 2: Install Git for Windows:
+
+Visit the Git for Windows download page: Git for Windows
+
+Download the Git for Windows installer.
+
+Run the installer.
+
+During installation, make sure to select the option to "Use Git from the Windows Command Prompt."
+
+Complete the Git installation.
+
+Once Git is installed, open a new instance of the Windows Terminal or Command Prompt to ensure that the changes take effect.
+
+Verify the Git installation by running the following command:
+
+batch
+Copy code
+git --version
+This should display the installed Git version.
+
+AskOpenAI Setup:
+
+Step 3: Clone the Repository and Set Up AskOpenAI:
+
+Open the Windows Terminal or Command Prompt.
+
+Clone the AskOpenAI repository to your local system:
+
+bash
+Copy code
+git clone https://github.com/CollOfTheWild/AskOpenAI.git
+cd AskOpenAI
+Create and activate a virtual environment in your project directory:
+
+batch
+Copy code
+python -m venv askenv
+.\askenv\Scripts\activate
+Install the OpenAI Python package using pip:
+
+batch
+Copy code
+pip install openai
+Open the openai_cli.py script in a text editor:
+
+batch
+Copy code
+notepad openai_cli.py
+Find the line that says:
+
+python
+Copy code
+openai.api_key = "your-api-key-here"
+Replace "your-api-key-here" with your actual OpenAI API key, save the file, and exit the text editor.
+
+Step 4: Run AskOpenAI:
+
+Ensure the virtual environment is activated. If it's not, run:
+
+batch
+Copy code
+.\askenv\Scripts\activate
+Run the AskOpenAI script:
+
+batch
+Copy code
+python openai_cli.py
+You can now use the ask command followed by your query enclosed in single quotes to interact with OpenAI models. For example:
+
+batch
+Copy code
+ask 'Your question here'
+These steps should guide you through installing Python, Git, and setting up AskOpenAI on your Windows 11 system.
